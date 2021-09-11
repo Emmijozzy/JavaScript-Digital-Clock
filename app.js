@@ -26,7 +26,7 @@ function  DateTime(){
     month.innerHTML = _month[this.month];
     day.innerHTML = _day[this.day];
     dat.innerHTML = this.date;
-    if(this.hr < 10 ){hr.innerHTML = "0" + this.hr % 12;}
+    if(this.hr % 12 < 10 ){hr.innerHTML = "0" + this.hr % 12;}
     else{hr.innerHTML = "0" + this.hr%12;}
     if(this.min < 10 ){ min.innerHTML = "0" + this.min;}
     else{min.innerHTML = this.min;}
