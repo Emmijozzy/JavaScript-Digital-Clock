@@ -26,14 +26,10 @@ function  DateTime(){
     month.innerHTML = _month[this.month];
     day.innerHTML = _day[this.day];
     dat.innerHTML = this.date;
-    if(this.hr % 12 < 10 ){hr.innerHTML = this.hr % 12;}
-    else{hr.innerHTML = this.hr%12;}
-    if(this.min < 10 ){ min.innerHTML = "0" + this.min;}
-    else{min.innerHTML = this.min;}
-    if(this.sec < 10 ){sec.innerHTML = "0" + this.sec;}
-    else{
-      sec.innerHTML = this.sec;
-    }
+    let hour = this.hr % 12;
+    hr.innerHTML = hour < 10 ? "0" + hour : hour;
+    min.innerHTML = this.min < 10 ? "0" + this.min : this.min;
+    sec.innerHTML = this.sec < 10 ? "0" + this.sec : this.sec;
     if(this.milisec < 100){
       milisec.innerHTML = "0" + this.milisec;
     }
